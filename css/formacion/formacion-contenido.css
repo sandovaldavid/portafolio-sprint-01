@@ -2,22 +2,30 @@
     display: flex;
     justify-content: space-between;
     padding-top: 2rem;
-    align-items: flex-end;
+    align-items: stretch;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 @media screen and (min-width: 600px) {
- .formacion__contenido{
-    align-items: center;
- }   
+    .formacion__contenido{
+        align-items: stretch;
+    }   
 }
+
 @media screen and (max-width: 600px) {
     .formacion__contenido{
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
+        gap: 3rem;
     }
 }
+
 @media screen and (min-width: 992px) {
     .formacion__contenido{
-        align-items: flex-end;
+        align-items: stretch;
     }
 }
