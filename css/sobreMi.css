@@ -2,5 +2,14 @@
     font-family: 'Raleway', sans-serif;
     color: #464646;
     background: #EAF2FD;
-    height: 90vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobreMi__texto-container {
+    max-width: 80%;
+    margin: auto;
 }
