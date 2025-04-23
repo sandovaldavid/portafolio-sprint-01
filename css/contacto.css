@@ -3,14 +3,61 @@
     background: #EAF2FD;
     color: #464646;
     font-family: 'Raleway', sans-serif;
-    height: 90vh;
+    min-height: 90vh;
     align-items: center;
     justify-content: center;
+    padding: 4rem 1rem;
+}
+
+.contacto__contenedor {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacto__titulo {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.contacto__descripcion {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .contacto {
+        padding: 3rem 1rem;
+    }
+    
+    .contacto__contenedor {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    .contacto__contenedor {
+        padding: 0 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .contacto {
-        display: flex;
+        padding: 4rem 2rem;
+    }
+
+    .contacto__contenedor {
+        flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
     }
 }
