@@ -1,17 +1,92 @@
+.head__menu {
+    font-family: 'Raleway', sans-serif;
+}
+
 .menu__lista {
+    display: flex;
     align-items: center;
+    gap: 2rem;
 }
 
 .menu__lista__item {
-    display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #464646;
-    padding-left: 2rem;
     transition: 0.5s;
+}
+
+.menu__lista__item a {
+    color: #464646;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.menu__lista__item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #2A7AE4;
+    transition: width 0.3s ease;
+}
+
+.menu__lista__item a:hover {
+    color: #2A7AE4;
+}
+
+.menu__lista__item a:hover::after {
+    width: 100%;
+}
+
+/* Estilo para el elemento activo en el menú */
+.menu__lista__item a.active {
+    color: #2A7AE4;
+    font-weight: 600;
+}
+
+.menu__lista__item a.active::after {
+    width: 100%;
+}
+
+/* Efecto de transición al hacer scroll */
+.menu__lista__item a.scroll-active {
+    color: #2A7AE4;
+    font-weight: 600;
+}
+
+.menu__lista__item a.scroll-active::after {
+    width: 100%;
+}
+
+/* Botón de contacto con estilo destacado */
+.menu__lista__item:last-child {
+    margin-left: auto;
+}
+
+.menu__lista__item:last-child a {
+    background-color: #2A7AE4;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu__lista__item:last-child a::after {
+    display: none;
+}
+
+.menu__lista__item:last-child a:hover {
+    background-color: #1b5bb5;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .menu__lista li:hover {
@@ -19,8 +94,19 @@
     transition: 0.5s;
 }
 
-.menu__lista__item:last-child {
-    font-weight: bold;
+/* Botón de menú móvil */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #464646;
+    transition: color 0.3s ease;
+    border: none;
+    background: transparent;
+}
+
+.menu-toggle:hover {
+    color: #2A7AE4;
 }
 
 @media screen and (min-width: 0px) {
@@ -40,11 +126,60 @@
     }
 }
 
-@media screen and (min-width: 992px) {
-    .head__menu {
-        margin-right: 10rem;
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
     }
+    
+    .menu__lista {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 250px;
+        padding: 1.5rem;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+    
+    .menu__lista.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .menu__lista__item {
+        width: 100%;
+        margin: 0.5rem 0;
+        display: block;
+        padding-left: 0;
+    }
+    
+    .menu__lista__item:last-child {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    
+    .menu__lista__item a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+    
+    .menu__lista__item:last-child a {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
 
+@media screen and (min-width: 992px) {
     .menu__lista__item {
         display: inline-block;
     }
