@@ -1,20 +1,33 @@
-.contacto__input{
-    padding: 1rem;
+.contacto__input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2.5rem;
     border: none;
-    outline: none;
-    font-style: normal;
-    font-weight: 400;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.3s ease;
     font-size: 16px;
     line-height: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-#mensaje, #asunto{
-    margin-top: 2rem;
+
+#mensaje, #asunto {
+    margin-top: 0; /* Eliminamos el margen extra que podría causar problemas */
 }
-#mensaje{
-    min-width: 60%;
-    height: 100px;
-    min-height: 50%;
+
+#mensaje {
+    min-height: 120px;
+    resize: vertical;
+    padding-top: 1rem;
 }
-.contacto__input:focus{
-    border-bottom: 2px solid #2A7AE4 ;
+
+.contacto__input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(42, 122, 228, 0.3);
+    background-color: #ffffff;
+}
+
+/* Arreglamos el estilo específico para el icono en el área de texto */
+.textarea-icon {
+    top: 1.5rem !important; /* Aseguramos que el icono esté bien posicionado */
 }
