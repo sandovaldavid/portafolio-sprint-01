@@ -2,6 +2,12 @@
     font-style: normal;
     font-size: 20px;
     line-height: 19px;
-    text-align: center;
     font-weight: bold;
+    /* Eliminado el text-align: center para evitar conflictos con la estructura de columnas */
+}
+
+@media screen and (max-width: 768px) {
+    .footer__titulo {
+        text-align: center;
+    }
 }
