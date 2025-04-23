@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Sandoval</title>
+    <title>David Sandoval | Portfolio</title>
+    <meta name="description" content="Portfolio profesional de David Sandoval - Desarrollador Web">
+    <!-- Reseteo y Normalización CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- AOS Library para animaciones de scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Estilos base -->
     <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/animations/animations.css">
+    <!-- Componentes principales -->
     <link rel="stylesheet" href="css/head.css">
     <link rel="stylesheet" href="css/presentacion.css">
     <link rel="stylesheet" href="css/skills.css">
@@ -16,14 +29,12 @@
     <link rel="stylesheet" href="css/experienciaProfesional.css">
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/sobreMi.css">
+    <!-- Subcomponentes -->
     <link rel="stylesheet" href="css/head/head-menu.css">
     <link rel="stylesheet" href="css/head/head-nombre.css">
     <link rel="stylesheet" href="css/presentacion/presentacion-descripcion.css">
     <link rel="stylesheet" href="css/presentacion/presentacion-imagen.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/sobreMi.css">
     <link rel="stylesheet" href="css/SobreMi/sobreMi-texto.css">
     <link rel="stylesheet" href="css/SobreMi/sobreMi-titulo.css">
     <link rel="stylesheet" href="css/SobreMi/sobreMi-firma.css">
@@ -71,37 +82,44 @@
         </div>
         <nav class="head__menu">
             <ul class="menu__lista">
-                <li class="menu__lista__item"><a href="#sobreMi">Sobre mi</a></li>
+                <li class="menu__lista__item"><a href="#presentacion">Inicio</a></li>
+                <li class="menu__lista__item"><a href="#sobreMi">Sobre mí</a></li>
                 <li class="menu__lista__item"><a href="#skills">Skills</a></li>
                 <li class="menu__lista__item"><a href="#hobbies">Hobbies</a></li>
                 <li class="menu__lista__item"><a href="#formacion">Formación</a></li>
                 <li class="menu__lista__item"><a href="#experiencia">Proyectos</a></li>
-                <li class="menu__lista__item" id="head_correo"><a href="mailto:sandovaldavid2201@gmail.com" id="correo">sandovaldavid2201@gmail.com</a></li>
+                <li class="menu__lista__item"><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <section class="presentacion container" id="presentacion">
-        <div class="presentacion__imagen"></div>
-        <div class="presentacion__descripcion">
-            <h1 class="presentacion__titulo">Hola, mi nombre es David Sandoval y desarrollo paginas web</h1>
-            <p class="presentacion__biografia">Soy estudiante de la Universidad Nacional de Piura, tengo 19 Años y soy de nacionalidad Peruana, actualmente estoy participando del proyecto Oracle ONE en Alura Latam</p>
-            <ul class="presentacion__lista" id="sobreMi">
-                <li class="presentacion__item"><a href="https://github.com/sandovaldavid">GitHub &#129133</a></li>
-                <li class="presentacion__item"><a href="https://www.linkedin.com/in/jdavidsandovals/">Linkendin &#129133</a></li>
-                <li class="presentacion__item"><a href="https://www.instagram.com/jdavid_ss/">Instagram &#129133</a></li>
-                <li class="presentacion__item"><a href="img/curriculo/Curriculo_David Sandoval.pdf">Curriculo &#129133</a></li>
+        <div class="presentacion__imagen" data-aos="fade-in" data-aos-delay="200"></div>
+        <div class="presentacion__descripcion" data-aos="fade-up" data-aos-delay="100">
+            <span class="presentacion__tag">Desarrollador Web Full Stack</span>
+            <h1 class="presentacion__titulo"><i>👋</i> ¡Hola! Soy <span class="highlight">David Sandoval</span></h1>
+            <p class="presentacion__biografia">Actualmente estudio Ingeniería Informática en la Universidad Nacional de Piura. Tengo 22 años y participo activamente en el proyecto Oracle Next Education (ONE) de Alura Latam, donde sigo formándome en tecnologías web y ciencia de datos.</p>
+            <p class="presentacion__lema"><i class="fas fa-laptop-code"></i> Apasionado por el desarrollo de software, creo soluciones funcionales, modernas y escalables para la web.</p>
+            <div class="presentacion__actions">
+                <a href="#contacto" class="btn btn-primary" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-envelope"></i> Contactarme</a>
+                <a href="#experiencia" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-code"></i> Ver proyectos</a>
+            </div>
+            <ul class="presentacion__lista">
+                <li class="presentacion__item" data-tooltip="GitHub"><a href="https://github.com/sandovaldavid"><i class="fab fa-github"></i></a></li>
+                <li class="presentacion__item" data-tooltip="LinkedIn"><a href="https://www.linkedin.com/in/jdavidsandovals/"><i class="fab fa-linkedin"></i></a></li>
+                <li class="presentacion__item" data-tooltip="Instagram"><a href="https://www.instagram.com/jdavid_ss/"><i class="fab fa-instagram"></i></a></li>
+                <li class="presentacion__item" data-tooltip="Currículum"><a href="img/curriculo/Curriculo_David Sandoval.pdf"><i class="far fa-file-pdf"></i></a></li>
             </ul>
         </div>
     </section>
-    <section class="sobreMi container" >
+    <section class="sobreMi container" id="sobreMi" >
         <h2 class="sobreMi__titulo">Sobre mi</h2>
         <p class="sobreMi__texto">
             Soy estudiante de Ingeniería informática, empecé mis estudios con Java, después Python, esto me ayudo para abrirme paso al desarrollo web con HTML, JavaScript y CSS.
         </p>
         <p class="sobreMi__texto">Soy una persona curiosa y me gusta resolver problemas. Aprender hace parte de mi día a día y los desafíos me motivan a encontrar las mejores soluciones.</p>
-        <img src="img/firma-david.png" alt="firma-david" class="sobreMi__firma" id="skills">
+        <img src="img/firma-david.png" alt="firma-david" class="sobreMi__firma">
     </section>
-    <section class="skills container" >
+    <section class="skills container" id="skills" >
         <h2 class="skills__titulo">Skills</h2>
         <div class="skills__tarjetas">
             <div class="tarjeta">
@@ -126,11 +144,11 @@
             </div>
             <div class="tarjeta">
                 <img src="img/Skills/css.png" alt="img_css" class="tarjeta__imagen tarjeta__css">
-                <p class="tarjeta__titulo" id="hobbies">CSS</p>
+                <p class="tarjeta__titulo">CSS</p>
             </div>
         </div>
     </section>
-    <section class="hobbies container" >
+    <section class="hobbies container" id="hobbies" >
         <h2 class="hobbies__titulo">Hobbies</h2>
         <div class="hobbies__tarjetas">
             <div class="tarjeta">
@@ -155,11 +173,11 @@
             </div>
             <div class="tarjeta">
                 <img src="img/Hobbies/tomar_fotos.png" alt="img_tomar_fotos" class="tarjeta__imagen tarjeta__tomarFotos">
-                <p class="tarjeta__titulo" id="formacion">Tomar fotos</p>
+                <p class="tarjeta__titulo">Tomar fotos</p>
             </div>
         </div>
     </section>
-    <section class="formacion container">
+    <section class="formacion container" id="formacion">
         <h2 class="formacion__titulo">Formación académica</h2>
         <div class="formacion__contenido">
             <div class="contenido">
@@ -175,10 +193,10 @@
             <div class="contenido">
                 <div class="contenido__imagen"><img src="img/UFRJ.png" alt="logo_ufrj" class="contenido__imagen-ufrj"></div>
                 <h2 class="contenido__titulo">Modificar</h2>
-                <p class="contenido__descripcion" id="experiencia">En curso - UFRJ</p>
+                <p class="contenido__descripcion">En curso - UFRJ</p>
             </div>
     </section>
-    <section class="experiensiaProfesional container">
+    <section class="experiensiaProfesional container" id="experiencia">
         <h2 class="experienciaProfesional__titulo">Experiencia Laboral</h2>
         <div class="experienciaProfesional__proyectos">
             <div class="proyecto">
@@ -217,7 +235,7 @@
         </div>
     </section>
     <section class="contacto container" id="contacto">
-        <div class="contacto__imagen"></div>
+        <img src="./img/contacto.png" alt="imagen de contacto" class="contacto__imagen" data-aos="fade-in" data-aos-delay="200">
         <div class="contacto__informacion">
             <h2 class="contacto__titulo">Contacto</h2>
             <p class="contacto__descripcion">¿Quieres contactarme? <br>
@@ -238,6 +256,18 @@
         <h2 class="footer__titulo">Desarrollado por David Sandoval</h2>
         <p class="footer__texto">2022</p>
     </footer>
+    <!-- Scripts -->
     <script src="js/contacto.js"></script>
+    <script src="js/navegacion.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar animaciones AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: false
+            });
+        });
+    </script>
 </body>
 </html>
