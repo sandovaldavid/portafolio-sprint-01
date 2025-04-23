@@ -1,8 +1,10 @@
-.b_repositorio{
+.b_repositorio {
     margin-right: 1rem;
-    border: 2px solid #2A7AE4;
-    transition: 0.5s;
+    background-color: transparent;
+    border: 1px solid #2A7AE4;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.b_repositorio:hover{
-    background: #0f10102a;
+
+.b_repositorio:hover {
+    background-color: rgba(42, 122, 228, 0.1);
 }
