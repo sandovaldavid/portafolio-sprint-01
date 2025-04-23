@@ -1,23 +1,39 @@
-.informacion__titulo{
+.informacion__titulo {
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #2A7AE4;
+    position: relative;
     padding-bottom: 0.5rem;
 }
+
+.informacion__titulo::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #2A7AE4;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
 @media screen and (min-width: 600px) {
-    .informacion__titulo{
-       font-size: 16px; 
-       padding-top: 1rem;
+    .informacion__titulo {
+       font-size: 20px; 
     }
 }
+
 @media screen and (max-width: 600px) {
-    .informacion__titulo{
-        font-size: 16px;
+    .informacion__titulo {
+        font-size: 20px;
     }
 }
+
 @media screen and (min-width: 996px) {
-    .informacion__titulo{
-        font-size: 22px;
+    .informacion__titulo {
+        font-size: 24px;
     }
 }
