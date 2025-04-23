@@ -1,0 +1,21 @@
+{
+	"name": "David Sandoval | Desarrollador Web Full Stack",
+	"short_name": "Portfolio David",
+	"description": "Portfolio profesional de David Sandoval - Desarrollador Web Full Stack especializado en tecnologías modernas y ciencia de datos",
+	"icons": [
+		{
+			"src": "img/icons/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#2A7AE4",
+	"background_color": "#FFFFFF",
+	"display": "standalone",
+	"start_url": "/"
+}
