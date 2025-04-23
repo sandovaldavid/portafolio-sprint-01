@@ -6,15 +6,10 @@
         display: none;
     }   
 }
-@media screen and (max-width: 600px) {
-    .contacto__imagen{
-        display: none;
-    }   
-}
+
 @media screen and (min-width: 992px) {
     .contacto__imagen{
         display: flex;
-        background: url(../../img/contacto.png) ;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
