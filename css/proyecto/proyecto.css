@@ -1,21 +1,40 @@
-.proyecto{
+.proyecto {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 4rem;
     align-items: center;
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3rem;
 }
+
+.proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto:last-child {
+    margin-bottom: 0;
+}
+
 @media screen and (min-width: 600px) {
-    .proyecto{
+    .proyecto {
         flex-direction: column;
     }
 }
+
 @media screen and (max-width: 600px) {
-    .proyecto{
+    .proyecto {
         flex-direction: row;
+        margin-bottom: 3rem;
     }   
 }
+
 @media screen and (min-width: 992px) {
-    .proyecto{
+    .proyecto {
         flex-direction: row;
+        padding-bottom: 0;
     }
 }
