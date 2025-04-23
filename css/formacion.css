@@ -2,22 +2,5 @@
     font-family: 'Raleway', sans-serif;
     color: #464646;
     background: #EAF2FD;
-}
-@media screen and (min-width: 600px) {
-    .formacion{
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-    }
-}
-@media screen and (max-width: 600px) {
-    .formacion{
-        padding-bottom: 1rem;
-        padding-top: 2.5rem;
-    }   
-}
-@media screen and (min-width: 992px) {
-    .formacion{
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
+    height: 90vh;
 }
