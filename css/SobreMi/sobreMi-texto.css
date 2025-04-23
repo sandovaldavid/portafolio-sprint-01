@@ -1,25 +1,102 @@
-.sobreMi__texto{
+.sobreMi__texto {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
-    width: 70%;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    color: #464646;
+}
+
+.sobreMi__texto strong {
+    font-weight: 600;
+    color: #2A7AE4;
+}
+
+.sobreMi__objetivo {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: rgba(42, 122, 228, 0.05);
+    border-left: 3px solid #2A7AE4;
+    border-radius: 0 4px 4px 0;
+}
+
+.sobreMi__objetivo i {
+    color: #2A7AE4;
+    margin-right: 8px;
+}
+
+.sobreMi__contacto {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: justify;
+    align-items: center;
+}
+
+.sobreMi__contacto i {
+    color: #2A7AE4;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sobreMi__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 1.5rem;
 }
+
+.sobreMi__lema {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    color: #666666;
+}
+
+.sobreMi__firma-container {
+    text-align: right;
+}
+
 @media screen and (min-width: 0px) {
-    .sobreMi__texto{
+    .sobreMi__texto {
         width: 100%;
-        font-size: 14px;
+        font-size: 15px;
+    }
+    
+    .sobreMi__objetivo {
+        font-size: 16px;
+    }
+    
+    .sobreMi__footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .sobreMi__firma-container {
+        margin-top: 1rem;
+        text-align: left;
     }
 }
+
 @media screen and (min-width: 992px) {
-    .sobreMi__texto{
-        width: 70%;
+    .sobreMi__texto {
+        width: 100%;
         font-size: 16px;
-        font-size: 19px;
+    }
+    
+    .sobreMi__objetivo {
+        font-size: 18px;
+    }
+    
+    .sobreMi__footer {
+        flex-direction: row;
+    }
+    
+    .sobreMi__firma-container {
+        margin-top: 0;
     }
 }
