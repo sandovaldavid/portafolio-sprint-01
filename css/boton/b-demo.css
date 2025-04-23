@@ -1,7 +1,8 @@
-.b_demo{
-    background: #2A7AE4;
-    transition: 0.5s;
+.b_demo {
+    background-color: #2A7AE4;
+    transition: background-color 0.3s ease;
 }
-.b_demo:hover{
-    background: #79a9e7ba;
+
+.b_demo:hover {
+    background-color: #1b5bb5;
 }
