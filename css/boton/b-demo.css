@@ -1,8 +1,12 @@
 .b_demo {
     background-color: #2A7AE4;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .b_demo:hover {
     background-color: #1b5bb5;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(42, 122, 228, 0.3);
 }
