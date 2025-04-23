@@ -1,5 +1,22 @@
-.sobreMi__firma{
+.sobreMi__firma {
     padding-top: 1rem;
     width: 140px;
-    height: 54px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sobreMi__firma:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .sobreMi__firma {
+        width: 120px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sobreMi__firma {
+        width: 140px;
+    }
 }
