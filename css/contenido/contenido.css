@@ -1,16 +1,28 @@
 .contenido{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     width: calc(33.33% - 3rem);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
+
+.contenido:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (min-width: 600px) {
     .contenido{
         width: 30%;
     }
 }
+
 @media screen and (max-width: 600px) {
     .contenido{
         width: 100%;
+        max-width: 350px;
     }
 }
