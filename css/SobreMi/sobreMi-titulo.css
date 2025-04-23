@@ -1,16 +1,19 @@
-.sobreMi__titulo{
+.sobreMi__titulo {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    line-height: 38px;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    position: relative;
 }
-@media screen and (min-width: 0px) {
-    .sobreMi__titulo{
-        font-size: 22px;
-    }   
-}
-@media screen and (min-width: 992px) {
-    .sobreMi__titulo{
-        font-size: 32px;
-    }
+
+.sobreMi__titulo::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #2A7AE4;
+    bottom: -10px;
+    left: 0;
+    border-radius: 2px;
 }
