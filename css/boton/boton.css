@@ -1,4 +1,36 @@
-.boton{
-    padding: 1rem;
-    border-radius: 30px;
+.boton {
+    border-radius: 5px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: none;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.boton i {
+    margin-right: 8px;
+}
+
+@media screen and (min-width: 992px) {
+    .boton {
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .boton {
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: center;
+    }
 }
