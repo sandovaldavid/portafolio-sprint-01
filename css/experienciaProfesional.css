@@ -1,10 +1,11 @@
-.experiensiaProfesional{
+.experienciaProfesional {
     font-family: 'Raleway', sans-serif;
     color: #464646;
     background: #F5F5F5;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding: 4rem 0;
 }
