@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon para iconos de tecnologías -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,32 +141,133 @@
             </div>
         </div>
     </section>
-    <section class="skills container" id="skills" >
-        <h2 class="skills__titulo">Skills</h2>
-        <div class="skills__tarjetas">
-            <div class="tarjeta">
-                <img src="img/Skills/html.png" alt="img_html" class="tarjeta__imagen tarjeta__html">
-                <p class="tarjeta__titulo">Html 5</p>
+    <section class="skills container" id="skills">
+        <h2 class="skills__titulo" data-aos="fade-up">Skills</h2>
+        <div class="skills__categorias">
+            <div class="skill-categoria" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="skill-categoria__titulo"><i class="fas fa-code"></i> Lenguajes</h3>
+                <div class="skill-categoria__contenido">
+                    <div class="skill-item" title="HTML5">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item" title="CSS3">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item" title="JavaScript">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item" title="PHP">
+                        <i class="devicon-php-plain colored"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-item" title="Python">
+                        <i class="devicon-python-plain colored"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item" title="Java">
+                        <i class="devicon-java-plain colored"></i>
+                        <span>Java</span>
+                    </div>
+                </div>
             </div>
-            <div class="tarjeta">
-                <img src="img/Skills/js.png" alt="img_javaScript" class="tarjeta__imagen tarjeta__js">
-                <p class="tarjeta__titulo">JavaScript</p>
+
+            <div class="skill-categoria" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="skill-categoria__titulo"><i class="fas fa-tools"></i> Frameworks & Librerías</h3>
+                <div class="skill-categoria__contenido">
+                    <div class="skill-item" title="React">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item" title="Node.js">
+                        <i class="devicon-nodejs-plain-wordmark colored"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item" title="Bootstrap">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="skill-item" title="Express">
+                        <i class="devicon-express-original"></i>
+                        <span>Express</span>
+                    </div>
+                </div>
             </div>
-            <div class="tarjeta">
-                <img src="img/Skills/php.png" alt="img_php" class="tarjeta__imagen tarjeta__php">
-                <p class="tarjeta__titulo">PHP</p>
+
+            <div class="skill-categoria" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="skill-categoria__titulo"><i class="fas fa-database"></i> Bases de datos</h3>
+                <div class="skill-categoria__contenido">
+                    <div class="skill-item" title="MySQL">
+                        <i class="devicon-mysql-plain colored"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-item" title="MongoDB">
+                        <i class="devicon-mongodb-plain colored"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill-item" title="PostgreSQL">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
             </div>
-            <div class="tarjeta">
-                <img src="img/Skills/node.png" alt="img_node" class="tarjeta__imagen tarjeta__node">
-                <p class="tarjeta__titulo">Node JS</p>
+
+            <div class="skill-categoria" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="skill-categoria__titulo"><i class="fas fa-cogs"></i> Herramientas</h3>
+                <div class="skill-categoria__contenido">
+                    <div class="skill-item" title="Git">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item" title="GitHub">
+                        <i class="devicon-github-original"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill-item" title="VS Code">
+                        <i class="devicon-vscode-plain colored"></i>
+                        <span>VS Code</span>
+                    </div>
+                    <div class="skill-item" title="Docker">
+                        <i class="devicon-docker-plain colored"></i>
+                        <span>Docker</span>
+                    </div>
+                </div>
             </div>
-            <div class="tarjeta">
-                <img src="img/Skills/react.png" alt="img_react" class="tarjeta__imagen tarjeta__react">
-                <p class="tarjeta__titulo">React</p>
+
+            <div class="skill-categoria" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="skill-categoria__titulo"><i class="fas fa-brain"></i> Ciencia de Datos</h3>
+                <div class="skill-categoria__contenido">
+                    <div class="skill-item" title="Pandas"> 
+                        <i class="devicon-pandas-plain colored"></i>
+                        <span>Pandas</span>
+                    </div>
+                    <div class="skill-item" title="NumPy">
+                        <i class="devicon-numpy-plain colored"></i>
+                        <span>NumPy</span>
+                    </div>
+                    <div class="skill-item" title="TensorFlow">
+                        <i class="devicon-tensorflow-original colored"></i>
+                        <span>TensorFlow</span>
+                    </div>
+                </div>
             </div>
-            <div class="tarjeta">
-                <img src="img/Skills/css.png" alt="img_css" class="tarjeta__imagen tarjeta__css">
-                <p class="tarjeta__titulo">CSS</p>
+
+            <div class="skill-categoria" data-aos="fade-up" data-aos-delay="600">
+                <h3 class="skill-categoria__titulo"><i class="fas fa-globe"></i> Idiomas</h3>
+                <div class="skill-categoria__contenido">
+                    <div class="skill-item" title="Español (Nativo)">
+                        <i class="fas fa-flag"></i>
+                        <span>Español</span>
+                        <small>Nativo</small>
+                    </div>
+                    <div class="skill-item" title="Inglés (Intermedio)">
+                        <i class="fas fa-flag"></i>
+                        <span>Inglés</span>
+                        <small>Intermedio</small>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
