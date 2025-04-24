@@ -1,6 +1,6 @@
 # 💻 Portafolio - Alura Challenge
 
-[![Version](https://img.shields.io/badge/Version-2.0.0-brightgreen?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sandovaldavid/portafolio-sprint-01/releases/tag/v2.0.0)
+[![Version](https://img.shields.io/badge/Version-2.1.0-brightgreen?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sandovaldavid/portafolio-sprint-01/releases/tag/v2.1.0)
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)

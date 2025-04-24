@@ -1,29 +1,72 @@
 // Navegación y efectos del menú
 document.addEventListener('DOMContentLoaded', function() {
-    // Agregar botón de menú móvil
+    console.log('DOM cargado completamente - Inicializando navegación');
+    
+    // Seleccionar elementos del menú
     const menu = document.querySelector('.head__menu');
     const menuList = document.querySelector('.menu__lista');
     const nav = document.querySelector('nav') || menu; // Buscar el nav o usar menu como fallback
     
-    // Crear el botón hamburguesa
-    const menuToggle = document.createElement('button');
-    menuToggle.className = 'menu-toggle';
-    menuToggle.setAttribute('aria-label', 'Menú de navegación');
-    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    let menuOverlay = document.querySelector('.menu-overlay');
+    if (!menuOverlay) {
+        menuOverlay = document.createElement('div');
+        menuOverlay.className = 'menu-overlay';
+        document.body.appendChild(menuOverlay);
+    }
     
-    // Insertar el botón en la navegación, no en el menú
-    nav.insertBefore(menuToggle, menuList);
+    // Verificar si ya existe un botón toggle
+    let menuToggle = document.querySelector('.menu-toggle');
+    
+    if (!menuToggle) {
+        console.log('Creando nuevo botón de menú toggle');
+        // Crear el botón hamburguesa si no existe
+        menuToggle = document.createElement('button');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.setAttribute('aria-label', 'Menú de navegación');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        
+        // Insertar el botón en la navegación, no en el menú
+        nav.insertBefore(menuToggle, menuList);
+    } else {
+        console.log('Botón toggle ya existe, usando el existente');
+    }
     
     // Funcionalidad del menú móvil
-    menuToggle.addEventListener('click', function() {
+    menuToggle.addEventListener('click', function(event) {
+        console.log('🔍 Toggle de menú clickeado');
+        event.stopPropagation(); // Evitar propagación del evento
+        
+        // Toggle de las clases active
         menuList.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        
+        // Prevenir scroll del body cuando el menú está abierto
         if (menuList.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        
+        // Cambiar el ícono y actualizar atributos ARIA
+        if (menuList.classList.contains('active')) {
+            console.log('Menú activado');
             menuToggle.innerHTML = '<i class="fas fa-times"></i>';
             menuToggle.setAttribute('aria-expanded', 'true');
         } else {
+            console.log('Menú desactivado');
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
             menuToggle.setAttribute('aria-expanded', 'false');
         }
+    });
+    
+    // Cerrar menú cuando se hace clic en el overlay
+    menuOverlay.addEventListener('click', function() {
+        menuList.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
     });
     
     // Cerrar menú al hacer clic en un enlace
@@ -31,8 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
     menuLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             menuList.classList.remove('active');
+            menuOverlay.classList.remove('active');
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
             menuToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
             
             // Desplazamiento suave a la sección
             if (this.getAttribute('href').startsWith('#')) {
@@ -41,11 +86,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetSection = document.querySelector(targetId);
                 
                 if (targetSection) {
-                    const offsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
-                    const headerOffset = 80; // Altura del header fijo
+                    // Obtener la altura real del header
+                    const header = document.querySelector('.head');
+                    const headerHeight = header.offsetHeight;
                     
+                    // Añadir un margen de seguridad para mejorar la visibilidad
+                    const scrollMargin = 20;
+                    
+                    // Calcular la posición de desplazamiento
+                    const offsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                    
+                    // Desplazarse considerando la altura del header y el margen de seguridad
                     window.scrollTo({
-                        top: offsetTop - headerOffset,
+                        top: offsetTop - headerHeight,
                         behavior: 'smooth'
                     });
                 }

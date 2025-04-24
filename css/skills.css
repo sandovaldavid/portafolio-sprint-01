@@ -6,14 +6,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem;
 }
 
 .skills__categorias {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
 .skill-categoria {
@@ -97,10 +96,6 @@
 }
 
 @media screen and (max-width: 600px) {
-    .skills {
-        padding: 2rem;
-    }
-
     .skills__categorias {
         grid-template-columns: 1fr;
         gap: 1.5rem;

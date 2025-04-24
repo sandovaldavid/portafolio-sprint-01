@@ -6,13 +6,15 @@
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
-    height: 3.5rem;
+    height: 5rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .head.scrolled {
@@ -20,29 +22,17 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* El siguiente estilo evita que el contenido quede oculto detrás del header fijo */
-body {
-    padding-top: 5.5rem;
-}
-
 @media screen and (max-width: 600px) {
     .head {
-        padding: 0.75rem 1rem;
-        height: 3rem;
+        padding: 0.5rem 0.75rem;
+        justify-content: space-between;
     }
     
-    body {
-        padding-top: 4.5rem;
-    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 991px) {
     .head {
-        padding: 0.75rem 1.5rem;
-        justify-content: center;
-    }
-    
-    body {
-        padding-top: 5rem;
+        padding: 0.5rem 1rem;
+        justify-content: space-between;
     }
 }
