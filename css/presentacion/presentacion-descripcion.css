@@ -185,6 +185,14 @@
     transition: all 0.3s ease;
 }
 
+@media screen and (min-width: 601px) and (max-width: 991px) {
+    .presentacion__actions .btn {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+}
+
 @media screen and (min-width: 600px) {
     .presentacion__titulo {
         font-style: normal;
