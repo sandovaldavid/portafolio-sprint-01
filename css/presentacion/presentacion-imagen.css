@@ -44,11 +44,12 @@
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .presentacion__imagen {
         order: initial;
         width: 300px;
         height: 300px;
+        margin-top: 1rem;
     }
 }
 
