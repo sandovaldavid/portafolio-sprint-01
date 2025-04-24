@@ -3,13 +3,14 @@
     background: #F5F5F5;
     font-family: 'Raleway', sans-serif;
     color: #464646;
+    min-height: 5rem;
 }
 
 .footer__contenido {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .footer__info {
@@ -73,18 +74,37 @@
     transform: translateY(-5px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 2rem 1rem;
+    }
+    
     .footer__contenido {
         flex-direction: column;
+        align-items: center;
     }
     
     .footer__info, .footer__contacto {
-        width: 100%;
         margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     
     .footer__redes {
         width: 100%;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer__contenido {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer__info{
+        text-align: center;
     }
 }
