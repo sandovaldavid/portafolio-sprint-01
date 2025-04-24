@@ -39,7 +39,7 @@
     .presentacion__imagen {
         width: 150px;
         height: 150px;
-        margin-bottom: 2rem;
+        margin: 2rem 0;
         align-self: center;
     }
 }
