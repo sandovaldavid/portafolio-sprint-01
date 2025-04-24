@@ -1,26 +1,56 @@
 // Navegación y efectos del menú
 document.addEventListener('DOMContentLoaded', function() {
-    // Agregar botón de menú móvil
+    console.log('DOM cargado completamente - Inicializando navegación');
+    
+    // Seleccionar elementos del menú
     const menu = document.querySelector('.head__menu');
     const menuList = document.querySelector('.menu__lista');
     const nav = document.querySelector('nav') || menu; // Buscar el nav o usar menu como fallback
     
-    // Crear el botón hamburguesa
-    const menuToggle = document.createElement('button');
-    menuToggle.className = 'menu-toggle';
-    menuToggle.setAttribute('aria-label', 'Menú de navegación');
-    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    // Verificar si ya existe un botón toggle
+    let menuToggle = document.querySelector('.menu-toggle');
     
-    // Insertar el botón en la navegación, no en el menú
-    nav.insertBefore(menuToggle, menuList);
+    if (!menuToggle) {
+        console.log('Creando nuevo botón de menú toggle');
+        // Crear el botón hamburguesa si no existe
+        menuToggle = document.createElement('button');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.setAttribute('aria-label', 'Menú de navegación');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        
+        // Insertar el botón en la navegación, no en el menú
+        nav.insertBefore(menuToggle, menuList);
+    } else {
+        console.log('Botón toggle ya existe, usando el existente');
+    }
     
     // Funcionalidad del menú móvil
-    menuToggle.addEventListener('click', function() {
+    menuToggle.addEventListener('click', function(event) {
+        console.log('🔍 Toggle de menú clickeado');
+        event.stopPropagation(); // Evitar propagación del evento
+        
         menuList.classList.toggle('active');
+        
+        // Cambiar el ícono y actualizar atributos ARIA
         if (menuList.classList.contains('active')) {
+            console.log('Menú activado');
             menuToggle.innerHTML = '<i class="fas fa-times"></i>';
             menuToggle.setAttribute('aria-expanded', 'true');
         } else {
+            console.log('Menú desactivado');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+    
+    // Cerrar menú cuando se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        if (menuList.classList.contains('active') && 
+            !menuList.contains(event.target) && 
+            !menuToggle.contains(event.target)) {
+            
+            menuList.classList.remove('active');
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
             menuToggle.setAttribute('aria-expanded', 'false');
         }
