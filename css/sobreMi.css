@@ -2,7 +2,6 @@
     font-family: 'Raleway', sans-serif;
     color: #464646;
     background: #EAF2FD;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,4 +11,10 @@
 .sobreMi__texto-container {
     max-width: 80%;
     margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .sobreMi {
+        padding: 2rem;
+    }
 }
