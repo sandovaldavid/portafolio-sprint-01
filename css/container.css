@@ -1,13 +1,10 @@
 html {
     scroll-behavior: smooth;
-}
-
-body{
-    scroll-behavior: smooth;
+    scroll-margin-top: 10px
 }
 
 .container{
-    min-height: calc(100vh - 3rem);
+    min-height: calc(100vh - 4rem);
 }
 
 @media screen and (max-width: 600px) {
