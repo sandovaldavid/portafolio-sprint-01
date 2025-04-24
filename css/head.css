@@ -22,11 +22,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* El siguiente estilo evita que el contenido quede oculto detrás del header fijo */
-body {
-    margin-top: 4rem;
-}
-
 @media screen and (max-width: 600px) {
     .head {
         padding: 0.5rem 0.75rem;
