@@ -2,10 +2,14 @@
     font-family: 'Raleway', sans-serif;
     color: #464646;
     background: #EAF2FD;
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem 0;
+}
+
+@media screen and (max-width: 600px) {
+    .formacion {
+        padding: 2rem;
+    }
 }
