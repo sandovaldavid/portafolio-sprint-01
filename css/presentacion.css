@@ -16,3 +16,15 @@
     }
     
 }
+
+@media screen and (max-width: 992px) {
+    .presentacion {
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+}
