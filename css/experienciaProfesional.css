@@ -7,5 +7,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0;
+    padding: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .experienciaProfesional {
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .experienciaProfesional {
+        padding: 3rem;
+    }
 }
