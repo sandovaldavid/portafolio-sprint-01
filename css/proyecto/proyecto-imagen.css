@@ -34,13 +34,7 @@
         width: 55%;
         height: 100%;
         max-height: none;
-    }
-    
-    .proyecto:nth-child(odd) .proyecto__imagen {
-        border-radius: 12px 0 0 12px;
-    }
-    
-    .proyecto:nth-child(even) .proyecto__imagen {
-        border-radius: 0 12px 12px 0;
+        border: 20px solid #ffffff;
+        border-radius: 40px;
     }
 }
