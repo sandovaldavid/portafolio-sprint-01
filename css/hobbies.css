@@ -20,3 +20,9 @@
         padding: 2rem;
     }
 }
+
+@media screen and (max-width: 968px) {
+    .hobbies {
+        padding: 3rem;
+    }
+}
