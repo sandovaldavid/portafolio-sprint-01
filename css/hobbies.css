@@ -14,15 +14,3 @@
 	gap: 2rem;
 	margin: 2rem 0;
 }
-
-@media screen and (max-width: 600px) {
-    .hobbies {
-        padding: 2rem;
-    }
-}
-
-@media screen and (max-width: 968px) {
-    .hobbies {
-        padding: 3rem;
-    }
-}
