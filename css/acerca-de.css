@@ -2,6 +2,11 @@
     background: #EAF2FD;
     font-family: 'Raleway', sans-serif;
     color: #464646;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
 }
 
 .acerca-de__titulo {
@@ -9,6 +14,7 @@
     font-weight: 700;
     font-size: 32px;
     margin-bottom: 3rem;
+    position: relative;
 }
 
 .acerca-de__contenido {
