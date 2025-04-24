@@ -132,9 +132,9 @@
 	color: #8bc34a;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 	.hobbies__categorias {
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		grid-template-columns: 1fr;
 		gap: 1.5rem;
 	}
 
@@ -152,8 +152,9 @@
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 601px) and (max-width: 991px) {
 	.hobbies__categorias {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 1.5rem;
 	}
 }
