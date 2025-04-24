@@ -29,7 +29,7 @@
     font-size: 16px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .contacto {
         padding: 3rem 1rem;
     }
@@ -42,7 +42,7 @@
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 991px) {
+@media screen and (min-width: 601px) and (max-width: 991px) {
     .contacto__contenedor {
         padding: 0 1rem;
         flex-direction: column;
