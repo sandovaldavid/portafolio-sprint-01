@@ -7,3 +7,9 @@
     gap: 4rem;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 600px) {
+    .experienciaProfesional__proyectos {
+        gap: 1rem;
+    }
+}
