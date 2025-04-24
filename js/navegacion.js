@@ -2,14 +2,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Agregar botón de menú móvil
     const menu = document.querySelector('.head__menu');
+    const menuList = document.querySelector('.menu__lista');
+    const nav = document.querySelector('nav') || menu; // Buscar el nav o usar menu como fallback
+    
+    // Crear el botón hamburguesa
     const menuToggle = document.createElement('button');
     menuToggle.className = 'menu-toggle';
     menuToggle.setAttribute('aria-label', 'Menú de navegación');
     menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-    menu.prepend(menuToggle);
+    
+    // Insertar el botón en la navegación, no en el menú
+    nav.insertBefore(menuToggle, menuList);
     
     // Funcionalidad del menú móvil
-    const menuList = document.querySelector('.menu__lista');
     menuToggle.addEventListener('click', function() {
         menuList.classList.toggle('active');
         if (menuList.classList.contains('active')) {
