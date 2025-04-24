@@ -1,0 +1,101 @@
+.acerca-de {
+    background: #EAF2FD;
+    font-family: 'Raleway', sans-serif;
+    color: #464646;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.acerca-de__titulo {
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.acerca-de__contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.acerca-de__imagen {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.perfil-github {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.perfil-github:hover {
+    transform: scale(1.05);
+}
+
+.acerca-de__texto {
+    flex: 2;
+    min-width: 300px;
+}
+
+.acerca-de__texto p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.tecnologias-lista {
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.tecnologias-lista li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.tecnologias-lista i {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    color: #2A7AE4;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.red-social {
+    font-size: 1.75rem;
+    color: #464646;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    .acerca-de__contenido {
+        flex-direction: column;
+    }
+    
+    .acerca-de__texto {
+        order: 2;
+    }
+    
+    .acerca-de__imagen {
+        order: 1;
+    }
+}

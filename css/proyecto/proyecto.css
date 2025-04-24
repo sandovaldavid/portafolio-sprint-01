@@ -1,21 +1,60 @@
-.proyecto{
+.proyecto {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 4rem;
-    align-items: center;
+    align-items: stretch;
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin-bottom: 4rem;
+    position: relative;
+    width: 100%;
 }
-@media screen and (min-width: 600px) {
-    .proyecto{
+
+.proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .proyecto {
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .proyecto {
         flex-direction: column;
     }
 }
-@media screen and (max-width: 600px) {
-    .proyecto{
-        flex-direction: row;
-    }   
-}
+
 @media screen and (min-width: 992px) {
-    .proyecto{
+    .proyecto {
         flex-direction: row;
+        height: 350px;
+    }
+    
+    /* Alternamos el orden para proyectos pares */
+    .proyecto:nth-child(even) .proyecto__imagen {
+        order: 2;
+    }
+    
+    .proyecto:nth-child(even) .proyecto__informacion {
+        order: 1;
+    }
+    
+    /* Para proyectos impares, la imagen va primero */
+    .proyecto:nth-child(odd) .proyecto__imagen {
+        order: 1;
+    }
+    
+    .proyecto:nth-child(odd) .proyecto__informacion {
+        order: 2;
     }
 }

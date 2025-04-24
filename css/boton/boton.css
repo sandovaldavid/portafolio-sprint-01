@@ -1,4 +1,41 @@
-.boton{
-    padding: 1rem;
-    border-radius: 30px;
+.boton {
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    margin-right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.boton:active {
+    transform: translateY(-1px);
+}
+
+@media screen and (min-width: 992px) {
+    .boton {
+        padding: 14px 22px;
+        font-size: 15px;
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .boton {
+        margin-bottom: 0;
+        width: 100%;
+        justify-content: center;
+    }
 }

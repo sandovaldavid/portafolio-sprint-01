@@ -1,5 +1,15 @@
-.experienciaProfesional__proyectos{
+.experienciaProfesional__proyectos {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    gap: 4rem;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .experienciaProfesional__proyectos {
+        gap: 1rem;
+    }
 }

@@ -1,22 +1,46 @@
-.contacto__imagen{
-    width: 40%;
+.contacto__imagen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 1rem;
+    max-width: 450px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-@media screen and (min-width: 600px) {
-    .contacto__imagen{
+
+.contacto__imagen-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contacto__imagen {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 968px) {
+    .contacto__imagen-container {
         display: none;
-    }   
+    }
 }
-@media screen and (max-width: 600px) {
-    .contacto__imagen{
-        display: none;
-    }   
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    .contacto__imagen-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
+
 @media screen and (min-width: 992px) {
-    .contacto__imagen{
-        display: flex;
-        background: url(../../img/contacto.png) ;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }   
+    .contacto__imagen-container {
+        flex: 0 0 40%;
+        margin: 0;
+    }
 }

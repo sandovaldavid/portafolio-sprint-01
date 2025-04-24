@@ -1,28 +1,29 @@
 .presentacion {
     background: #F5F5F5;
-    padding-bottom: 2rem;
     display: flex;
     font-family: 'Raleway', sans-serif;
+    justify-content: space-between;
     align-items: center;
 }
 
-@media screen and (min-width: 600px) {
-    .presentacion {
-        justify-content: space-between;
-    }
-}
 
 @media screen and (max-width: 600px) {
     .presentacion {
-        flex-wrap: wrap;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        padding: 2rem;
+        justify-content: stretch;
     }
+    
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
     .presentacion {
-        padding-top: 8rem;
-        padding-bottom: 3rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
     }
+    
 }

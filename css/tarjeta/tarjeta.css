@@ -1,23 +1,47 @@
-.tarjeta{
+.tarjeta {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     background: #FFFFFF;
     width: calc(16.6% - 3rem);
     justify-content: flex-end;
-    padding: 1rem 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    height: 150px;
 }
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta__icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2A7AE4;
+}
+
 @media screen and (min-width: 600px) {
-    .tarjeta{
+    .tarjeta {
         width: calc(33.33% - 3.5rem);
         justify-content: space-around;
         margin: 1rem 1rem 1rem 0;
     }   
 }
+
 @media screen and (max-width: 600px) {
-    .tarjeta{
+    .tarjeta {
         width: calc(50% - 3.5rem);
         justify-content: space-around;
         margin: 1rem 0 1rem 0;
     }   
+}
+
+@media screen and (min-width: 992px) {
+    .tarjeta {
+        width: calc(16.6% - 3rem);
+        height: 180px;
+    }
 }

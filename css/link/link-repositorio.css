@@ -1,8 +1,28 @@
-.link_repositorio{
+.link_repositorio {
     color: #2A7AE4;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
+
+.link_repositorio::before {
+    content: '\f121';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 0.9em;
+}
+
 @media screen and (min-width: 600px) {
-    .link_repositorio{
+    .link_repositorio {
         font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .link_repositorio {
+        font-size: 15px;
     }
 }

@@ -1,0 +1,134 @@
+/* Animaciones para elementos de la página */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Clases de animación para aplicar a elementos */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-up {
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.slide-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.6s ease forwards;
+}
+
+/* Animación para botones en hover */
+.btn-hover-effect {
+  transition: all 0.3s ease;
+}
+
+.btn-hover-effect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación para tarjetas */
+.tarjeta {
+  transition: all 0.3s ease-in-out;
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de subrayado para enlaces del menú */
+.menu__lista__item a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu__lista__item a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #2A7AE4;
+  transition: width 0.3s ease;
+}
+
+.menu__lista__item a:hover::after {
+  width: 100%;
+}
+
+/* Animación para iconos */
+.tarjeta__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2A7AE4;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover .tarjeta__icon {
+  transform: scale(1.2);
+}
+
+/* Animaciones para redes sociales */
+.red-social, .footer__red {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.red-social:hover, .footer__red:hover {
+  transform: translateY(-5px);
+  color: #2A7AE4;
+}

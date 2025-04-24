@@ -1,17 +1,23 @@
-.experiensiaProfesional{
+.experienciaProfesional {
     font-family: 'Raleway', sans-serif;
     color: #464646;
     background: #F5F5F5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
 }
-@media screen and (min-width: 600px) {
-    .experiensiaProfesional{
-        padding-top: 2rem;
-        padding-bottom: 1.5rem;
+
+@media screen and (max-width: 600px) {
+    .experienciaProfesional {
+        padding: 2rem;
     }
 }
-@media screen and (min-width: 992px) {
-    .experiensiaProfesional{
-        padding-top: 3rem;
-        padding-bottom: 5rem;
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .experienciaProfesional {
+        padding: 3rem;
     }
 }

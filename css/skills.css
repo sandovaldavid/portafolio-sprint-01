@@ -1,24 +1,132 @@
 .skills {
     background: #F5F5F5;
-    padding-top: 2rem;
     font-family: 'Raleway', sans-serif;
     color: #464646;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.skills__categorias {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-categoria {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.skill-categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-categoria__titulo {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #2A7AE4;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 0.75rem;
+}
+
+.skill-categoria__titulo i {
+    margin-right: 0.5rem;
+}
+
+.skill-categoria__contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 0.75rem;
+    min-width: 60px;
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    text-align: center;
+}
+
+.skill-item:hover {
+    background-color: rgba(42, 122, 228, 0.05);
+    transform: translateY(-3px);
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Ajustes específicos para iconos Devicon */
+.skill-item i[class*="devicon"] {
+    margin-bottom: 0.75rem;
+}
+
+/* Mantener el efecto de escala al hacer hover */
+.skill-item:hover i {
+    transform: scale(1.15);
+}
+
+.skill-item span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.skill-item small {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 0.25rem;
 }
 
 @media screen and (max-width: 600px) {
     .skills {
-        padding-bottom: 1rem;
+        padding: 2rem;
+    }
+
+    .skills__categorias {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skill-categoria {
+        padding: 1.25rem;
+    }
+    
+    .skill-item {
+        min-width: 70px;
+        padding: 0.5rem;
+    }
+    
+    .skill-item i {
+        font-size: 1.5rem;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 601px) and (max-width: 991px) {
     .skills {
-        padding-bottom: 2rem;
+        padding: 3rem;
     }
-}
 
-@media screen and (min-width: 992px) {
-    .skills {
-        padding-top: 4rem;
+    .skills__categorias {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
     }
 }

@@ -1,16 +1,4 @@
-.sobreMi__titulo{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
-}
-@media screen and (min-width: 0px) {
-    .sobreMi__titulo{
-        font-size: 22px;
-    }   
-}
-@media screen and (min-width: 992px) {
-    .sobreMi__titulo{
-        font-size: 32px;
-    }
+.sobreMi__titulo {
+    position: relative;
+    margin-top: 1rem;
 }

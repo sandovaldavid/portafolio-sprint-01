@@ -2,11 +2,24 @@
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.4;
+    padding: 0.25rem 1.25rem 1.5rem 1.25rem;
+    color: #666666;
 }
+
+.contenido__descripcion::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #2A7AE4;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
 @media screen and (max-width: 600px) {
     .contenido__descripcion{
-        padding-bottom: 1rem;
         font-size: 14px;
     }
 }

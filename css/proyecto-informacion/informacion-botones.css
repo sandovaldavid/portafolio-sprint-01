@@ -1,3 +1,13 @@
-.informacion__botones{
-    padding-top: 1rem;
+.informacion__botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+    .informacion__botones {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
 }

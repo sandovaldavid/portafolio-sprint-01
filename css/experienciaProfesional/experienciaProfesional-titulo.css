@@ -1,22 +1,21 @@
-.experienciaProfesional__titulo{
-    font-style: normal;
-    font-weight: 700;
-    line-height: 26px;
-    text-align: center;
-    padding-bottom: 2rem;
+.experienciaProfesional__titulo {
+    position: relative;
 }
+
 @media screen and (min-width: 600px) {
-    .experienciaProfesional__titulo{
-        font-size: 22px;
+    .experienciaProfesional__titulo {
+        font-size: 28px;
     } 
 }
+
 @media screen and (min-width: 992px) {
-    .experienciaProfesional__titulo{
+    .experienciaProfesional__titulo {
         font-size: 32px;
     }
 }
+
 @media screen and (max-width: 600px) {
-    .experienciaProfesional__titulo{
-        font-size: 22px;
+    .experienciaProfesional__titulo {
+        font-size: 24px;
     } 
 }

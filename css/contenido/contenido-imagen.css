@@ -1,24 +1,43 @@
 .contenido__imagen{
     display: flex;
     background: #FFFFFF;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
+
 .contenido__imagen-alura, .contenido__imagen-unp, .contenido__imagen-ufrj{
-    width: 190px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    max-width: 140px;
+    max-height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
+
+.contenido:hover .contenido__imagen-alura,
+.contenido:hover .contenido__imagen-unp,
+.contenido:hover .contenido__imagen-ufrj {
+    transform: scale(1.1);
+}
+
 @media screen and (min-width: 600px) {
     .contenido__imagen-alura, .contenido__imagen-unp, .contenido__imagen-ufrj{
-        width: 100px;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        max-width: 80px;
+        max-height: 80px;
+    }
+    
+    .contenido__imagen {
+        height: 150px;
     }
 }
+
 @media screen and (min-width: 992px) {
     .contenido__imagen-alura, .contenido__imagen-unp, .contenido__imagen-ufrj{
-        width: 190px;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        max-width: 140px;
+        max-height: 100px;
+    }
+    
+    .contenido__imagen {
+        height: 180px;
     }
 }

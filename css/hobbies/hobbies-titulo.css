@@ -1,8 +1,4 @@
-.hobbies__titulo{
-    text-align: center;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
-    padding-bottom: 2rem;
+.hobbies__titulo {
+	margin-top: 2rem;
+	position: relative;
 }
