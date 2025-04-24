@@ -96,10 +96,6 @@
 }
 
 @media screen and (max-width: 600px) {
-    .skills {
-        padding: 2rem;
-    }
-
     .skills__categorias {
         grid-template-columns: 1fr;
         gap: 1.5rem;
