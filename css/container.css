@@ -3,6 +3,10 @@ html {
     scrollbar-color: #ccc #f5f5f5;
 }
 
+body{
+    background: #EAF2FD;
+}
+
 .container{
     min-height: calc(100vh - 5rem);
 }
